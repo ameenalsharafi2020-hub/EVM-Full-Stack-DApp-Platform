@@ -1,0 +1,16 @@
+{
+  "network": "sepolia",
+  "deployer": "0xb5Cd0E3c49282590ef79D809b475399fd40449cD",
+  "timestamp": "2026-02-02T16:00:02.776Z",
+  "contracts": {
+    "Token": "0xAd783e7287097550E2fc3f66C1451015024149F3",
+    "NFT": "0xd4DE547e1c732eb1127e659591441cb68D05183B",
+    "Vault": "0xa79E59054e52Eb3Bc21733A44CeDBE55975578D8"
+  },
+  "blockNumber": 10176895,
+  "transactionHashes": {
+    "Token": "0x19a11f6d897800cf857ab3808d79803cc017a1af4a5c70310049b95a21aa6375",
+    "NFT": "0x40d66fe88922d6eb6280e49ac9f068f50f8839a0e3974bf8dfa0511ce5c9001e",
+    "Vault": "0x62f214f4046853693a26f710ee7179e6ea2a332910633bb6b1a775edf0571684"
+  }
+}
