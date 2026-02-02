@@ -2,7 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_DApp-2ea44f?style=for-the-badge&logo=vercel)](https://evm-full-stack-d-app-platform.vercel.app/)
 
-A professional, production-ready Decentralized Application...
+https://evm-full-stack-d-app-platform.vercel.app/
 
 A professional, production-ready Decentralized Application (DApp) that demonstrates full-stack Web3 capabilities by combining robust Ethereum smart contracts with a modern, high-performance user interface.
 
