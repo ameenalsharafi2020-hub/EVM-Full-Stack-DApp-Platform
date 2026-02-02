@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 
 import { useAccount, useBalance, useDisconnect } from 'wagmi';
 import { Copy, ExternalLink, LogOut, CheckCircle } from 'lucide-react';
 import Card, { CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import { formatAddress, formatEth } from '@/utils/format';
+import { formatAddress, formatEth, copyToClipboard } from '@/lib/utils/format';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 
@@ -16,7 +16,7 @@ export default function WalletInfo() {
 
   const copyAddress = async () => {
     if (address) {
-      await navigator.clipboard.writeText(address);
+      await copyToClipboard(address);
       setCopied(true);
       toast.success('Address copied!');
       setTimeout(() => setCopied(false), 2000);
@@ -69,10 +69,10 @@ export default function WalletInfo() {
             variant="outline"
             size="sm"
             className="flex-1"
-            onClick={() => window.open(https://etherscan.io/address/, '_blank')}
+            onClick={() => window.open(`https://etherscan.io/address/${address}`, '_blank')}
           >
             <ExternalLink className="mr-2 h-4 w-4" />
-            View on Explorer
+            Explorer
           </Button>
           <Button variant="outline" size="sm" className="flex-1" onClick={() => disconnect()}>
             <LogOut className="mr-2 h-4 w-4" />

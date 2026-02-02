@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
@@ -27,7 +27,7 @@ export default function LoadingSpinner({
         animate={{ rotate: 360 }}
         transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
       >
-        <Loader2 className={ text-primary-600\} />
+        <Loader2 className={`${sizes[size]} text-primary-600`} />
       </motion.div>
       {text && (
         <p className="text-sm font-medium text-gray-600 dark:text-gray-400">{text}</p>

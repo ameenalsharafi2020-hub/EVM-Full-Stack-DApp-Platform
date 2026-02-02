@@ -1,14 +1,12 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import Card, { CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import Button from '@/components/ui/Button';
 import { TrendingUp } from 'lucide-react';
 
 const timeframes = ['1H', '1D', '1W', '1M', '1Y'];
 
-// Mock data
 const generateData = (points: number) => {
   return Array.from({ length: points }, (_, i) => ({
     time: i,
@@ -33,7 +31,11 @@ export default function PriceChart() {
               <button
                 key={tf}
                 onClick={() => setTimeframe(tf)}
-                className={\px-3 py-1 text-sm font-medium rounded-md transition-colors }
+                className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+                  timeframe === tf
+                    ? 'bg-white text-primary-600 shadow-sm dark:bg-gray-700'
+                    : 'text-gray-600 hover:text-gray-900 dark:text-gray-400'
+                }`}
               >
                 {tf}
               </button>
@@ -44,7 +46,7 @@ export default function PriceChart() {
       <CardContent>
         <div className="mb-4">
           <p className="text-3xl font-bold text-gray-900 dark:text-white">
-            \
+            ${data[data.length - 1]?.price.toFixed(4)}
           </p>
           <p className="text-sm text-green-600">+12.5% (24h)</p>
         </div>
